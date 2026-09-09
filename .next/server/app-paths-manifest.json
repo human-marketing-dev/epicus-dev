@@ -1,7 +1,4 @@
 {
-  "/page": "app/page.js",
-  "/nosotros/page": "app/nosotros/page.js",
-  "/contacto/page": "app/contacto/page.js",
-  "/portafolio/page": "app/portafolio/page.js",
-  "/desarrolladores/page": "app/desarrolladores/page.js"
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/demo/page": "app/demo/page.js"
 }
