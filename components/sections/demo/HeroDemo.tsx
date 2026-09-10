@@ -4,27 +4,56 @@ import FadeIn from "@/components/ui/FadeIn";
 
 // ─── 01 · Hero ────────────────────────────────────────────────────────────────
 // Idea rectora y bifurcación de rutas.
+// La imagen viene de Sanity (imagenSitio · seccion "hero"). Si no hay imagen
+// cargada, cae a un gradiente de marca.
 
-export default function HeroDemo() {
+export default function HeroDemo({
+  imagenUrl,
+  imagenAlt,
+}: {
+  imagenUrl?: string | null;
+  imagenAlt?: string | null;
+}) {
   return (
     <div className="relative min-h-[calc(100vh-68px)] flex flex-col lg:block bg-white">
 
       {/* ── Panel visual — mitad derecha en desktop ── */}
-      <div className="relative lg:absolute lg:top-0 lg:right-0 lg:w-[46%] lg:h-full overflow-hidden bg-ink h-[300px] lg:h-auto order-last lg:order-none">
+      <div className="relative lg:absolute lg:top-0 lg:right-0 lg:w-[46%] lg:h-full overflow-hidden bg-ink h-[320px] lg:h-auto order-last lg:order-none">
+
+        {imagenUrl ? (
+          <img
+            src={imagenUrl}
+            alt={imagenAlt ?? "Proyecto del portafolio de Epicus"}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        ) : (
+          <>
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(150deg, #0a1628 0%, #142d6b 45%, #0a0a0f 100%)",
+              }}
+            />
+            <div
+              className="absolute inset-0 flex items-center justify-center select-none pointer-events-none font-display font-light leading-none"
+              style={{ fontSize: "260px", color: "rgba(255,255,255,0.04)" }}
+              aria-hidden
+            >
+              E
+            </div>
+          </>
+        )}
+
+        {/* Velo — asienta la foto y da contraste al badge */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(150deg, #0a1628 0%, #142d6b 45%, #0a0a0f 100%)",
+              "linear-gradient(150deg, rgba(10,22,40,0.45) 0%, rgba(20,45,107,0.35) 40%, rgba(10,10,15,0.75) 100%)",
           }}
-        />
-        <div
-          className="absolute inset-0 flex items-center justify-center select-none pointer-events-none font-display font-light leading-none"
-          style={{ fontSize: "260px", color: "rgba(255,255,255,0.04)" }}
           aria-hidden
-        >
-          E
-        </div>
+        />
 
         {/* Badge de escala — solo desktop */}
         <div className="absolute bottom-12 left-10 right-10 backdrop-blur-xl border border-white/15 bg-white/[0.07] px-7 py-6 text-white hidden lg:block">

@@ -1,69 +1,45 @@
 import Link from "next/link";
+import Image from "next/image";
 import Section from "@/components/ui/Section";
 import FadeIn from "@/components/ui/FadeIn";
 import { SectionLabel } from "@/components/sections/demo/shared";
 
-// ─── Diagrama de doble posición ───────────────────────────────────────────────
+// ─── Foto flotante ────────────────────────────────────────────────────────────
+// Marco desplazado + sombra profunda para que la imagen se despegue del fondo.
+// El encuadre se corre a la derecha para sacar del cuadro el auto de la esquina.
 
-function Conector() {
+function FotoFlotante() {
   return (
-    <div className="flex justify-center" aria-hidden>
-      <span className="block w-px h-8 bg-gradient-to-b from-black/[0.12] to-blue/40" />
-    </div>
-  );
-}
+    <div className="relative">
 
-function DiagramaDoblePosicion() {
-  return (
-    <div className="w-full">
-      {/* Frente 1 — desarrolladores */}
-      <div className="bg-white border border-black/[0.08] px-7 py-6">
-        <p className="text-overline text-ink-soft mb-2">Frente 01</p>
-        <h3 className="text-h6 text-ink mb-1">Desarrolladores</h3>
-        <p className="text-[13px] font-light text-ink-soft leading-[1.7]">
-          Comercializamos sus desarrollos en Monterrey y su área metropolitana.
-        </p>
-      </div>
-
-      <Conector />
-
-      {/* Núcleo — Epicus */}
+      {/* Marco desplazado */}
       <div
-        className="px-7 py-7 text-white"
+        className="hidden sm:block absolute -left-5 -top-5 w-full h-full border border-blue/30 pointer-events-none"
+        aria-hidden
+      />
+
+      {/* Bloque de acento */}
+      <div
+        className="hidden sm:block absolute -right-4 -bottom-4 w-28 h-28 bg-blue/10 pointer-events-none"
+        aria-hidden
+      />
+
+      {/* Imagen */}
+      <div
+        className="relative aspect-[4/3] overflow-hidden bg-ink"
         style={{
-          background:
-            "linear-gradient(135deg, #0a1628 0%, #142d6b 60%, #0a0a0f 100%)",
+          boxShadow:
+            "0 48px 88px -28px rgba(10,10,15,0.45), 0 16px 32px -16px rgba(10,10,15,0.28)",
         }}
       >
-        <p className="text-overline text-blue-light mb-2">Epicus</p>
-        <h3 className="font-display text-h4 font-light mb-4">
-          Inteligencia de mercado
-        </h3>
-        <div className="flex flex-wrap gap-2">
-          {[
-            "Precio de origen",
-            "Inventario en preventa",
-            "Lectura directa del mercado",
-          ].map((tag) => (
-            <span
-              key={tag}
-              className="text-[11px] font-light tracking-[0.04em] text-white/70 border border-white/15 px-3 py-[5px] rounded-[2px]"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      <Conector />
-
-      {/* Frente 2 — compradores */}
-      <div className="bg-white border border-black/[0.08] px-7 py-6">
-        <p className="text-overline text-ink-soft mb-2">Frente 02</p>
-        <h3 className="text-h6 text-ink mb-1">Compradores e inversionistas</h3>
-        <p className="text-[13px] font-light text-ink-soft leading-[1.7]">
-          Asesoramos la selección de propiedad residencial, vertical e industrial.
-        </p>
+        <Image
+          src="/epicus-santte.webp"
+          alt="Santte Residencial, desarrollo del portafolio de Epicus en Monterrey"
+          fill
+          sizes="(max-width: 1024px) 100vw, 45vw"
+          className="object-cover"
+          style={{ objectPosition: "60% 50%" }}
+        />
       </div>
     </div>
   );
@@ -74,10 +50,19 @@ function DiagramaDoblePosicion() {
 export default function Posicion() {
   return (
     <Section className="bg-cream" size="lg">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-24 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
-        {/* Columna izquierda — texto */}
-        <FadeIn delay={0} direction="right">
+        {/* Columna izquierda — foto */}
+        <FadeIn
+          delay={0.15}
+          direction="right"
+          className="order-2 lg:order-1 lg:pl-5"
+        >
+          <FotoFlotante />
+        </FadeIn>
+
+        {/* Columna derecha — texto */}
+        <FadeIn delay={0} direction="left" className="order-1 lg:order-2">
           <div>
             <SectionLabel>Quiénes somos</SectionLabel>
 
@@ -112,11 +97,6 @@ export default function Posicion() {
               <span aria-hidden>→</span>
             </Link>
           </div>
-        </FadeIn>
-
-        {/* Columna derecha — diagrama */}
-        <FadeIn delay={0.15} direction="left">
-          <DiagramaDoblePosicion />
         </FadeIn>
 
       </div>

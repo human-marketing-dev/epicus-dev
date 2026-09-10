@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 
+import { getImagen } from "@/sanity/lib/client";
+import { urlForImage } from "@/sanity/lib/image";
+
 import HeroDemo from "@/components/sections/demo/HeroDemo";
 import Posicion from "@/components/sections/demo/Posicion";
 import Cifras from "@/components/sections/demo/Cifras";
@@ -15,6 +18,8 @@ import FooterDemo from "@/components/sections/demo/FooterDemo";
 // ─── Metadata ─────────────────────────────────────────────────────────────────
 // noindex mientras sea una demo de revisión.
 
+export const revalidate = 60;
+
 export const metadata: Metadata = {
   title: { absolute: "Epicus | Inteligencia inmobiliaria en Monterrey" },
   description:
@@ -26,10 +31,16 @@ export const metadata: Metadata = {
 // Estructura del documento «Home institucional · Estructura y textos» v1.0.
 // El bloque 10 · Clientes se omite por indicación del propio documento.
 
-export default function DemoHome() {
+export default async function DemoHome() {
+  const heroImagen = await getImagen("hero");
+  const heroImagenUrl = heroImagen?.imagen ? urlForImage(heroImagen.imagen) : null;
+
   return (
     <>
-      <HeroDemo />            {/* 01 · Hero                     */}
+      <HeroDemo
+        imagenUrl={heroImagenUrl}
+        imagenAlt={heroImagen?.alt}
+      />                      {/* 01 · Hero                     */}
       <Posicion />            {/* 02 · Posición                 */}
       <Cifras />              {/* 03 · Cifras                   */}
       <Inteligencia />        {/* 04 · Inteligencia de mercado  */}

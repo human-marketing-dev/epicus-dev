@@ -31,19 +31,16 @@ const IconCierre = () => (
 
 const bloques = [
   {
-    num: "01",
     icon: <IconAtraccion />,
     title: "Atracción de leads",
     body: "Estrategia de medios, campañas, creativos y landing pages, con reporte mensual de resultados.",
   },
   {
-    num: "02",
     icon: <IconProcesamiento />,
     title: "Procesamiento comercial",
     body: "Setters dedicados que filtran, contactan y confirman la cita. CRM con trazabilidad completa y dashboard en tiempo real.",
   },
   {
-    num: "03",
     icon: <IconCierre />,
     title: "Acompañamiento y cierre",
     body: "Trabajamos hombro a hombro con tu equipo de ventas: supervisión semanal de pipeline, metas mensuales acordadas y reporte ejecutivo. Cuando el proyecto lo requiere, sumamos vendedores a tu estructura.",
@@ -112,22 +109,15 @@ export default function RutaDesarrollador() {
           {/* Bloques de servicio */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/[0.08] border-y border-white/[0.08]">
             {bloques.map((b, i) => (
-              <FadeIn key={b.num} delay={0.2 + i * 0.1}>
-                <div className="relative bg-[#0b101c] px-7 py-9 h-full overflow-hidden">
-                  <span
-                    className="absolute top-4 right-5 font-display font-light leading-none select-none pointer-events-none text-[76px]"
-                    style={{ color: "rgba(255,255,255,0.045)" }}
-                    aria-hidden
-                  >
-                    {b.num}
-                  </span>
-                  <IconBox tone="dark" className="relative mb-5">
+              <FadeIn key={b.title} delay={0.2 + i * 0.1}>
+                <div className="bg-[#0b101c] px-7 py-9 h-full">
+                  <IconBox tone="dark" className="mb-5">
                     {b.icon}
                   </IconBox>
-                  <h3 className="relative font-display text-h4 font-normal text-white mb-3">
+                  <h3 className="font-display text-h4 font-normal text-white mb-3">
                     {b.title}
                   </h3>
-                  <p className="relative text-[13px] font-light text-white/50 leading-[1.8]">
+                  <p className="text-[13px] font-light text-white/50 leading-[1.8]">
                     {b.body}
                   </p>
                 </div>
