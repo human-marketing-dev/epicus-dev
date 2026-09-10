@@ -1,6 +1,6 @@
 import FadeIn from "@/components/ui/FadeIn";
 import Container from "@/components/ui/Container";
-import { ChipConfirmar } from "@/components/sections/demo/shared";
+import { ChipConfirmar } from "@/components/sections/shared";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 // `pendiente: true` = dato marcado «confirmar» en el Brief Maestro (§0).
@@ -13,9 +13,9 @@ const cifras = [
     pendiente: false,
   },
   {
-    valor: "—",
+    valor: "+20",
     descriptor: "desarrolladores atendidos en Monterrey y su área metropolitana",
-    pendiente: true,
+    pendiente: false,
   },
   {
     valor: "3",
@@ -23,9 +23,9 @@ const cifras = [
     pendiente: false,
   },
   {
-    valor: "—",
-    descriptor: "operaciones acompañadas hasta la escrituración",
-    pendiente: true,
+    valor: "+400",
+    descriptor: "operaciones acompañadas hasta la escrituración cada año",
+    pendiente: false,
   },
 ];
 

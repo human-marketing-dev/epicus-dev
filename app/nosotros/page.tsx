@@ -2,7 +2,9 @@ import NosotrosHero from "@/components/sections/NosotrosHero";
 import Valores from "@/components/sections/Valores";
 import Cofra from "@/components/sections/Cofra";
 
+// Fuera de la navegación y del sitemap: la ruta sigue viva pero no se indexa.
 export const metadata = {
+  robots: { index: false, follow: false },
   title: "Nosotros",
   description:
     "Conoce al equipo detrás de EPICUS. Somos asesores inmobiliarios en Monterrey comprometidos con construir relaciones, no transacciones.",

@@ -7,7 +7,7 @@ import FadeIn from "@/components/ui/FadeIn";
 // La imagen viene de Sanity (imagenSitio · seccion "hero"). Si no hay imagen
 // cargada, cae a un gradiente de marca.
 
-export default function HeroDemo({
+export default function Hero({
   imagenUrl,
   imagenAlt,
 }: {

@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import Section from "@/components/ui/Section";
 import FadeIn from "@/components/ui/FadeIn";
-import { SectionLabel } from "@/components/sections/demo/shared";
+import { SectionLabel } from "@/components/sections/shared";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
@@ -33,7 +33,7 @@ const etapas = [
 // El tramo se extiende sobre el gap del grid (-mr-8) para unir un nodo con el
 // siguiente; en la última etapa se oculta en desktop.
 
-export default function ProcesoDemo() {
+export default function Proceso() {
   return (
     <Section className="bg-cream" size="lg">
       <FadeIn delay={0}>

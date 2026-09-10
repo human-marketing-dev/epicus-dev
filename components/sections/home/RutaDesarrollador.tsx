@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import FadeIn from "@/components/ui/FadeIn";
-import { SectionLabel, IconBox, svgStyle } from "@/components/sections/demo/shared";
+import { SectionLabel, IconBox, svgStyle } from "@/components/sections/shared";
 
 // ─── Iconos ───────────────────────────────────────────────────────────────────
 
@@ -55,7 +55,13 @@ const datosApoyo = [
 
 // ─── 07 · Ruta desarrollador ──────────────────────────────────────────────────
 
-export default function RutaDesarrollador() {
+export default function RutaDesarrollador({
+  antetitulo = "Growth Partner",
+  mostrarCta = true,
+}: {
+  antetitulo?: string;
+  mostrarCta?: boolean;
+}) {
   return (
     <div id="desarrollador" className="scroll-mt-[68px]">
       <section
@@ -80,7 +86,7 @@ export default function RutaDesarrollador() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-start mb-14">
             <FadeIn delay={0} direction="right">
               <div>
-                <SectionLabel tone="dark">Growth Partner</SectionLabel>
+                <SectionLabel tone="dark">{antetitulo}</SectionLabel>
                 <h2 className="font-display text-h2 text-white">
                   Sumamos estructura<br />
                   comercial a tu{" "}
@@ -141,12 +147,14 @@ export default function RutaDesarrollador() {
                 ))}
               </div>
 
-              <Link
-                href="/desarrolladores"
-                className="shrink-0 inline-block bg-blue hover:bg-blue-light text-white text-btn px-8 py-[15px] rounded-[4px] transition-all duration-200 hover:-translate-y-px"
-              >
-                Conocer Growth Partner
-              </Link>
+              {mostrarCta && (
+                <Link
+                  href="/growth-partner"
+                  className="shrink-0 inline-block bg-blue hover:bg-blue-light text-white text-btn px-8 py-[15px] rounded-[4px] transition-all duration-200 hover:-translate-y-px"
+                >
+                  Conocer Growth Partner
+                </Link>
+              )}
             </div>
           </FadeIn>
 

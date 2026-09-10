@@ -2,7 +2,9 @@ import PortafolioHero from "@/components/sections/PortafolioHero";
 import EpicusIntelligence from "@/components/sections/EpicusIntelligence";
 import Tipologias from "@/components/sections/Tipologias";
 
+// Fuera de la navegación y del sitemap: la ruta sigue viva pero no se indexa.
 export const metadata = {
+  robots: { index: false, follow: false },
   title: "Portafolio",
   description:
     "Acceso a 95 proyectos inmobiliarios activos en Monterrey — terrenos residenciales, departamentos, casas e industrial. Información que no verás en ningún portal.",

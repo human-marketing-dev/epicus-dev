@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Section from "@/components/ui/Section";
 import FadeIn from "@/components/ui/FadeIn";
-import { SectionLabel, IconBox, svgStyle } from "@/components/sections/demo/shared";
+import { SectionLabel, IconBox, svgStyle } from "@/components/sections/shared";
 
 // ─── Iconos ───────────────────────────────────────────────────────────────────
 

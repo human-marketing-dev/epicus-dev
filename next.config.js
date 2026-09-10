@@ -8,6 +8,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      // /desarrolladores queda retirada; su código se conserva en
+      // app/_desarrolladores (carpeta privada, fuera del enrutador).
+      { source: "/desarrolladores", destination: "/growth-partner", permanent: true },
+      // La demo del home nuevo pasó a ser la raíz.
+      { source: "/demo", destination: "/", permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

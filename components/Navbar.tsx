@@ -9,13 +9,12 @@ import { cn } from "@/lib/utils";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
+// Nosotros, Portafolio y Desarrolladores quedan fuera de la navegación.
+// Sus rutas siguen vivas (Desarrolladores redirige a Growth Partner).
 const links = [
-  { label: "Inicio",          href: "/" },
-  { label: "Nosotros",        href: "/nosotros" },
-  { label: "Portafolio",      href: "/portafolio" },
-  { label: "Desarrolladores", href: "/desarrolladores" },
-//  { label: "Recursos",        href: "/recursos" },
-  { label: "Contacto",        href: "/contacto" },
+  { label: "Inmobiliaria",   href: "/" },
+  { label: "Growth Partner", href: "/growth-partner" },
+  { label: "Contacto",       href: "/contacto" },
 ];
 
 // ─── Navbar ───────────────────────────────────────────────────────────────────

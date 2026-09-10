@@ -1,6 +1,6 @@
 import Section from "@/components/ui/Section";
 import FadeIn from "@/components/ui/FadeIn";
-import { SectionLabel } from "@/components/sections/demo/shared";
+import { SectionLabel } from "@/components/sections/shared";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 

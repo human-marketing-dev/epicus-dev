@@ -3,75 +3,72 @@ import Image from "next/image";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
-const nav = [
-  {
-    heading: "Empresa",
-    links: [
-      { label: "Nosotros",             href: "/nosotros" },
-      { label: "Para Desarrolladores", href: "/desarrolladores" },
-      { label: "Recursos",             href: "/recursos" },
-    ],
-  },
-  {
-    heading: "Portafolio",
-    links: [
-      { label: "Terrenos Residenciales", href: "/portafolio" },
-      { label: "Departamentos",          href: "/portafolio" },
-      { label: "Industrial",             href: "/portafolio" },
-      { label: "Casas",                  href: "/portafolio" },
-    ],
-  },
-  {
-    heading: "Contacto",
-    links: [
-      { label: "info@epicus.com.mx", href: "mailto:info@epicus.com.mx" },
-      { label: "+52 81 2600 5642",   href: "tel:+528126005642" },
-      { label: "Monterrey, N.L.",    href: "#" },
-    ],
-  },
+const menu = [
+  { label: "Inmobiliaria",   href: "/" },
+  { label: "Growth Partner", href: "/growth-partner" },
+  { label: "Contacto",       href: "/contacto" },
+];
+
+const contacto = [
+  { label: "www.epicus.com.mx", href: "https://www.epicus.com.mx" },
+  { label: "811 538 5567",      href: "tel:+528115385567" },
+  { label: "Monterrey, N.L.",   href: null },
 ];
 
 // ─── Iconos sociales ──────────────────────────────────────────────────────────
 
 const IconFacebook = () => (
   <svg viewBox="0 0 24 24" style={{ width: 18, height: 18, fill: "currentColor" }}>
-    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
   </svg>
 );
 
 const IconInstagram = () => (
-  <svg viewBox="0 0 24 24" style={{ width: 18, height: 18, stroke: "currentColor", fill: "none", strokeWidth: 1.5, strokeLinecap: "round" as const, strokeLinejoin: "round" as const }}>
-    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-    <circle cx="12" cy="12" r="3"/>
-    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+  <svg
+    viewBox="0 0 24 24"
+    style={{
+      width: 18,
+      height: 18,
+      stroke: "currentColor",
+      fill: "none",
+      strokeWidth: 1.5,
+      strokeLinecap: "round" as const,
+      strokeLinejoin: "round" as const,
+    }}
+  >
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+    <circle cx="12" cy="12" r="3" />
+    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
   </svg>
 );
 
-// ─── Footer ───────────────────────────────────────────────────────────────────
+// ─── Pie de página ────────────────────────────────────────────────────────────
 
 export default function Footer() {
   return (
     <footer className="bg-blue text-white pt-16 pb-10">
       <div className="mx-auto w-full px-[4%]">
 
-        {/* Top — brand + columnas de nav */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 pb-12 border-b border-white/20 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] gap-12 lg:gap-24 pb-12 border-b border-white/20 mb-8">
 
-          {/* Brand */}
-          <div className="col-span-2 md:col-span-1">
+          {/* Boilerplate */}
+          <div>
             <Image
               src="/logo-footer-epicus.webp"
               alt="EPICUS"
-              width={120}
-              height={40}
-              className="mb-4"
+              width={130}
+              height={44}
+              className="mb-6"
             />
-            <p className="text-[13px] font-light text-white/70 leading-[1.8] mb-6">
-              Asesoría e inteligencia inmobiliaria en Monterrey y área metropolitana.
+            <p className="text-[14px] font-light text-white/75 leading-[1.9] max-w-[560px]">
+              Epicus es una firma de inteligencia inmobiliaria en Monterrey.
+              Opera como brazo comercial de los principales desarrolladores de la
+              ciudad y su área metropolitana, con más de 95 proyectos activos en
+              monitoreo. Esa posición le permite maximizar el rendimiento de cada
+              decisión de compra e inversión: residencial, vertical e industrial.
             </p>
 
-            {/* Redes sociales */}
-            <div className="flex gap-3">
+            <div className="flex gap-3 mt-8">
               <a
                 href="https://www.facebook.com/epicusresidencial/?locale=es_LA"
                 target="_blank"
@@ -93,27 +90,49 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Columnas de links */}
-          {nav.map((col) => (
-            <div key={col.heading}>
-              <h5 className="text-overline text-white/60 mb-5">{col.heading}</h5>
+          {/* Contacto + menú */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+            <div>
+              <h5 className="text-overline text-white/60 mb-5">Contacto</h5>
               <ul className="flex flex-col gap-[10px]">
-                {col.links.map((link) => (
-                  <li key={link.label}>
+                {contacto.map((c) => (
+                  <li key={c.label}>
+                    {c.href ? (
+                      <a
+                        href={c.href}
+                        className="text-[13px] font-light text-white/80 hover:text-white transition-colors duration-200"
+                      >
+                        {c.label}
+                      </a>
+                    ) : (
+                      <span className="text-[13px] font-light text-white/80">
+                        {c.label}
+                      </span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h5 className="text-overline text-white/60 mb-5">Navegación</h5>
+              <ul className="flex flex-col gap-[10px]">
+                {menu.map((m) => (
+                  <li key={m.label}>
                     <Link
-                      href={link.href}
+                      href={m.href}
                       className="text-[13px] font-light text-white/80 hover:text-white transition-colors duration-200"
                     >
-                      {link.label}
+                      {m.label}
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
-          ))}
+          </div>
         </div>
 
-        {/* Bottom — copyright + aviso */}
+        {/* Bottom */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <p className="text-[12px] text-white/50">
             © {new Date().getFullYear()} EPICUS — Todos los derechos reservados
@@ -122,7 +141,7 @@ export default function Footer() {
             href="/aviso-de-privacidad"
             className="text-[12px] text-white/50 hover:text-white transition-colors duration-200"
           >
-            Aviso de Privacidad
+            Aviso de privacidad
           </Link>
         </div>
 
