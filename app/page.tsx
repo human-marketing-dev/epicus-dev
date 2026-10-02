@@ -19,16 +19,16 @@ import Cierre from "@/components/sections/home/Cierre";
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: { absolute: "Epicus | Inteligencia inmobiliaria en Monterrey" },
+  title: { absolute: "Alfra Inmobiliaria | Inteligencia inmobiliaria en Monterrey" },
   description:
     "Asesoría de compra e inversión inmobiliaria en Monterrey con más de 95 proyectos activos, precio de origen e inteligencia real de mercado. Residencial, vertical e industrial.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Epicus | Inteligencia inmobiliaria en Monterrey",
+    title: "Alfra Inmobiliaria | Inteligencia inmobiliaria en Monterrey",
     description:
       "Operamos la comercialización de los principales desarrolladores de Monterrey. Esa posición nos permite elegir dentro del mercado completo y maximizar el rendimiento de cada decisión.",
     url: "/",
-    images: [{ url: "/og-image-epicus.webp", width: 1200, height: 630 }],
+    images: [{ url: "/og-image-alfra.webp", width: 1200, height: 630 }],
   },
 };
 

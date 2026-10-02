@@ -25,7 +25,7 @@ export default function NosotrosHero() {
         <div className="flex flex-col gap-5 lg:pt-4">
           <FadeIn delay={0.15}>
             <p className="text-b1 text-ink-mid">
-              EPICUS nació de una convicción simple: el cliente merece más que un
+              ALFRA INMOBILIARIA nació de una convicción simple: el cliente merece más que un
               listado de propiedades. Merece un asesor que conozca el mercado a
               fondo, que entienda sus objetivos financieros y de vida, y que le
               ayude a tomar la mejor decisión posible con información real.

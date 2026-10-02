@@ -4,7 +4,7 @@ import { ChipConfirmar } from "@/components/sections/shared";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 // `pendiente: true` = dato marcado «confirmar» en el Brief Maestro (§0).
-// Sustituye `valor` y quita la bandera cuando Epicus valide la cifra.
+// Sustituye `valor` y quita la bandera cuando Alfra Inmobiliaria valide la cifra.
 
 const cifras = [
   {

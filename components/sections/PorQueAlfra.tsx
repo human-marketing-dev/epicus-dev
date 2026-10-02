@@ -47,15 +47,15 @@ const razones = [
   { icon: <IconHeart />,  title: "Alineación de intereses",       body: "Somos también inversionistas inmobiliarios. Entendemos lo que se juega un desarrollador en cada proyecto." },
 ];
 
-// ─── PorQueEpicus ─────────────────────────────────────────────────────────────
+// ─── PorQueAlfra ─────────────────────────────────────────────────────────────
 
-export default function PorQueEpicus() {
+export default function PorQueAlfra() {
   return (
     <Section className="bg-white">
       <FadeIn delay={0}>
         <p className="flex items-center gap-3 text-overline text-blue mb-5">
           <span className="block w-6 h-px bg-blue" />
-          ¿Por qué EPICUS?
+          ¿Por qué ALFRA INMOBILIARIA?
         </p>
         <h2 className="font-display text-h2 text-ink">
           No somos un broker.<br />

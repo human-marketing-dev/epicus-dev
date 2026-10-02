@@ -112,7 +112,7 @@ export default function Contacto() {
           <div className="flex flex-col gap-6">
             {[
               { icon: <IconPhone />, label: "WhatsApp",  value: "+52 81 2600 5642",    href: "https://wa.me/528126005642" },
-              { icon: <IconMail />,  label: "Correo",    value: "info@epicus.com.mx",  href: "mailto:info@epicus.com.mx" },
+              { icon: <IconMail />,  label: "Correo",    value: "info@alfrainmobiliaria.com",  href: "mailto:info@alfrainmobiliaria.com" },
               { icon: <IconPin />,   label: "Ubicación", value: "Monterrey, Nuevo León", href: undefined },
             ].map((d, i) => (
               <FadeIn key={d.label} delay={0.25 + i * 0.1}>
@@ -210,7 +210,7 @@ export default function Contacto() {
                 <div className="text-center py-16">
                   <div className="w-16 h-16 rounded-full bg-blue/10 flex items-center justify-center text-blue mx-auto mb-6"><IconCheck /></div>
                   <h3 className="font-display text-h3 text-ink mb-3">¡Listo! Recibimos tu solicitud.</h3>
-                  <p className="text-b1 font-light text-ink-mid">Un asesor de EPICUS te contactará en las próximas horas. Nos da gusto que quieras conocernos.</p>
+                  <p className="text-b1 font-light text-ink-mid">Un asesor de ALFRA INMOBILIARIA te contactará en las próximas horas. Nos da gusto que quieras conocernos.</p>
                 </div>
               )}
             </div>

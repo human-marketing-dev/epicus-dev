@@ -4,24 +4,18 @@ import Image from "next/image";
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const menu = [
-  { label: "Inmobiliaria",   href: "/" },
-  { label: "Growth Partner", href: "/growth-partner" },
-  { label: "Contacto",       href: "/contacto" },
+  { label: "Inmobiliaria", href: "/" },
+  { label: "Contacto",     href: "/contacto" },
 ];
 
 const contacto = [
-  { label: "www.epicus.com.mx", href: "https://www.epicus.com.mx" },
+  { label: "alfrainmobiliaria.com", href: "https://alfrainmobiliaria.com" },
   { label: "811 538 5567",      href: "tel:+528115385567" },
   { label: "Monterrey, N.L.",   href: null },
 ];
 
 // ─── Iconos sociales ──────────────────────────────────────────────────────────
 
-const IconFacebook = () => (
-  <svg viewBox="0 0 24 24" style={{ width: 18, height: 18, fill: "currentColor" }}>
-    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
-  </svg>
-);
 
 const IconInstagram = () => (
   <svg
@@ -54,14 +48,14 @@ export default function Footer() {
           {/* Boilerplate */}
           <div>
             <Image
-              src="/logo-footer-epicus.webp"
-              alt="EPICUS"
-              width={130}
-              height={44}
-              className="mb-6"
+              src="/logos/alfra-inmobiliaria-logo-blanco.webp"
+              alt="ALFRA INMOBILIARIA"
+              width={150}
+              height={62}
+              className="h-11 w-auto mb-6"
             />
             <p className="text-[14px] font-light text-white/75 leading-[1.9] max-w-[560px]">
-              Epicus es una firma de inteligencia inmobiliaria en Monterrey.
+              Alfra Inmobiliaria es una firma de inteligencia inmobiliaria en Monterrey.
               Opera como brazo comercial de los principales desarrolladores de la
               ciudad y su área metropolitana, con más de 95 proyectos activos en
               monitoreo. Esa posición le permite maximizar el rendimiento de cada
@@ -70,16 +64,7 @@ export default function Footer() {
 
             <div className="flex gap-3 mt-8">
               <a
-                href="https://www.facebook.com/epicusresidencial/?locale=es_LA"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-[4px] border border-white/25 bg-white/10 flex items-center justify-center text-white/80 hover:text-white hover:border-white/50 transition-all duration-200"
-                aria-label="Facebook"
-              >
-                <IconFacebook />
-              </a>
-              <a
-                href="https://www.instagram.com/epicusinmobiliaria/"
+                href="https://www.instagram.com/alfra.inmobiliaria/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-[4px] border border-white/25 bg-white/10 flex items-center justify-center text-white/80 hover:text-white hover:border-white/50 transition-all duration-200"
@@ -135,7 +120,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <p className="text-[12px] text-white/50">
-            © {new Date().getFullYear()} EPICUS — Todos los derechos reservados
+            © {new Date().getFullYear()} ALFRA INMOBILIARIA — Todos los derechos reservados
           </p>
           <Link
             href="/aviso-de-privacidad"

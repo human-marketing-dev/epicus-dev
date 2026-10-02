@@ -5,7 +5,7 @@ import FadeIn from "@/components/ui/FadeIn";
 
 const estructura = [
   { label: "COFRA",               sub: "Holding / Family Office",                  active: false },
-  { label: "EPICUS",              sub: "Comercialización & Brokerage",              active: true  },
+  { label: "ALFRA INMOBILIARIA",              sub: "Comercialización & Brokerage",              active: true  },
   { label: "Desarrollo",          sub: "División en crecimiento",                   active: false },
   { label: "Portafolio de inversión", sub: "Activos residenciales + industriales",  active: false },
 ];
@@ -26,12 +26,12 @@ export default function Cofra() {
                 Estructura corporativa
               </p>
               <h2 className="font-display text-h2 text-white">
-                EPICUS forma parte<br />
+                ALFRA INMOBILIARIA forma parte<br />
                 de <em className="italic text-blue-light">COFRA</em>
               </h2>
               <p className="text-b1 font-light text-white/55 mt-6 mb-4 max-w-[420px]">
                 COFRA es nuestra estructura de holding familiar orientada a la
-                acumulación de activos inmobiliarios en el largo plazo. EPICUS es
+                acumulación de activos inmobiliarios en el largo plazo. ALFRA INMOBILIARIA es
                 su brazo de comercialización e inteligencia de mercado.
               </p>
               <p className="text-[14px] font-light text-white/40 leading-[1.8] max-w-[420px]">

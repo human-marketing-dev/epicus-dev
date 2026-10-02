@@ -23,41 +23,41 @@ const cormorant = Cormorant_Garamond({
  
 // ─── Metadata ────────────────────────────────────────────────────────────────
  
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://epicus.com.mx";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://alfrainmobiliaria.com";
  
 export const metadata: Metadata = {
   title: {
-    default: "EPICUS — Asesoría Inmobiliaria en Monterrey",
-    template: "%s | EPICUS",
+    default: "ALFRA INMOBILIARIA — Asesoría Inmobiliaria en Monterrey",
+    template: "%s | ALFRA INMOBILIARIA",
   },
   description:
     "Asesoría e inteligencia inmobiliaria en Monterrey y área metropolitana. Acceso a 95 proyectos activos y 4,480 unidades disponibles.",
   metadataBase: new URL(siteUrl),
  
   openGraph: {
-    title: "EPICUS — Asesoría Inmobiliaria en Monterrey",
+    title: "ALFRA INMOBILIARIA — Asesoría Inmobiliaria en Monterrey",
     description:
       "Asesoría e inteligencia inmobiliaria en Monterrey y área metropolitana.",
     url: siteUrl,
-    siteName: "EPICUS",
+    siteName: "ALFRA INMOBILIARIA",
     locale: "es_MX",
     type: "website",
     images: [
       {
-        url: "/og-image-epicus.webp",
+        url: "/og-image-alfra.webp",
         width: 1200,
         height: 630,
-        alt: "EPICUS — Asesoría Inmobiliaria",
+        alt: "ALFRA INMOBILIARIA — Asesoría Inmobiliaria",
       },
     ],
   },
  
   twitter: {
     card: "summary_large_image",
-    title: "EPICUS — Asesoría Inmobiliaria en Monterrey",
+    title: "ALFRA INMOBILIARIA — Asesoría Inmobiliaria en Monterrey",
     description:
       "Asesoría e inteligencia inmobiliaria en Monterrey y área metropolitana.",
-    images: ["/og-image-epicus.webp"],
+    images: ["/og-image-alfra.webp"],
   },
  
   robots: {
@@ -69,11 +69,7 @@ export const metadata: Metadata = {
     },
   },
  
-  icons: {
-    icon: "/icons/favicon.ico",
-    shortcut: "/icons/favicon-32x32.png",
-    apple: "/icons/apple-touch-icon.png",
-  },
+  // Los íconos los resuelve el App Router desde app/icon.png y app/apple-icon.png
 };
  
 // ─── Layout ──────────────────────────────────────────────────────────────────

@@ -125,7 +125,7 @@ export default async function RecursoPage({ params }: { params: { slug: string }
           <div className="max-w-[760px]">
             <p className="flex items-center gap-3 text-overline text-blue mb-5">
               <span className="block w-6 h-px bg-blue" />
-              {recurso.categoria} · EPICUS
+              {recurso.categoria} · ALFRA INMOBILIARIA
             </p>
             <h1 className="font-display text-h1 text-ink mb-6">
               {recurso.titulo}

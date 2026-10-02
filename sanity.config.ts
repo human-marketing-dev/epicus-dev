@@ -5,8 +5,8 @@ import imagenSitio from './sanity/schemas/imagen'
 import hero from './sanity/schemas/hero'
 
 export default defineConfig({
-  name: 'epicus',
-  title: 'Epicus',
+  name: 'alfrainmobiliaria',
+  title: 'Alfra Inmobiliaria',
   projectId: 'hoq99nai',
   dataset: 'production',
   plugins: [structureTool()],

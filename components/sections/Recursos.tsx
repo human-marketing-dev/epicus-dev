@@ -39,7 +39,7 @@ function RecursoCard({ recurso, index }: { recurso: Recurso; index: number }) {
         <Link href={slug ? `/recursos/${slug}` : "/contacto"} className="block group">
           <div style={{ background: gradiente }} className="p-7 group-hover:opacity-90 transition-opacity duration-200">
             <p className="text-[10px] tracking-[0.18em] uppercase text-blue-light/80 mb-4">
-              {recurso.categoria} · EPICUS
+              {recurso.categoria} · ALFRA INMOBILIARIA
             </p>
             <h3 className="font-display text-[22px] font-normal text-white leading-[1.25]">
               {recurso.titulo}

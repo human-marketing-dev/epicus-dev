@@ -57,10 +57,8 @@ const datosApoyo = [
 
 export default function RutaDesarrollador({
   antetitulo = "Growth Partner",
-  mostrarCta = true,
 }: {
   antetitulo?: string;
-  mostrarCta?: boolean;
 }) {
   return (
     <div id="desarrollador" className="scroll-mt-[68px]">
@@ -147,14 +145,12 @@ export default function RutaDesarrollador({
                 ))}
               </div>
 
-              {mostrarCta && (
-                <Link
-                  href="/growth-partner"
-                  className="shrink-0 inline-block bg-blue hover:bg-blue-light text-white text-btn px-8 py-[15px] rounded-[4px] transition-all duration-200 hover:-translate-y-px"
-                >
-                  Conocer Growth Partner
-                </Link>
-              )}
+              <Link
+                href="/contacto"
+                className="shrink-0 inline-block bg-blue hover:bg-blue-light text-white text-btn px-8 py-[15px] rounded-[4px] transition-all duration-200 hover:-translate-y-px"
+              >
+                Hablemos de tu proyecto
+              </Link>
             </div>
           </FadeIn>
 

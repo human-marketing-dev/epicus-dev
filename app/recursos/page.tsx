@@ -8,10 +8,10 @@ export const metadata = {
   description:
     "Cápsulas de inteligencia inmobiliaria sobre el mercado de Monterrey — inversión, tendencias, guías y más. Información para tomar mejores decisiones.",
   openGraph: {
-    title: "Recursos | EPICUS",
+    title: "Recursos | ALFRA INMOBILIARIA",
     description:
       "Inteligencia inmobiliaria del mercado de Monterrey. Guías, análisis y tendencias para tomar mejores decisiones.",
-    images: [{ url: "og-image-epicus.webp", width: 1200, height: 630 }],
+    images: [{ url: "og-image-alfra.webp", width: 1200, height: 630 }],
   },
 };
 

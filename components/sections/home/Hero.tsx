@@ -23,7 +23,7 @@ export default function Hero({
         {imagenUrl ? (
           <img
             src={imagenUrl}
-            alt={imagenAlt ?? "Proyecto del portafolio de Epicus"}
+            alt={imagenAlt ?? "Proyecto del portafolio de Alfra Inmobiliaria"}
             className="absolute inset-0 w-full h-full object-cover"
           />
         ) : (

@@ -45,10 +45,10 @@ export async function POST(request: Request) {
       );
     }
 
-    // Email a EPICUS
+    // Email a ALFRA INMOBILIARIA
     await resend.emails.send({
-      from: "EPICUS Contacto <info@epicus.com.mx>",
-      to: ["info@epicus.com.mx"],
+      from: "ALFRA INMOBILIARIA Contacto <info@alfrainmobiliaria.com>",
+      to: ["info@alfrainmobiliaria.com"],
       subject: `Nueva solicitud de asesoría — ${nombre}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 32px;">
@@ -83,7 +83,7 @@ export async function POST(request: Request) {
           </table>
           <div style="margin-top: 32px; padding: 16px; background: #f3f4f6; border-radius: 6px;">
             <p style="margin: 0; font-size: 12px; color: #6b7280;">
-              Este mensaje fue enviado desde el formulario de contacto de epicus.com.mx
+              Este mensaje fue enviado desde el formulario de contacto de alfrainmobiliaria.com
             </p>
           </div>
         </div>
@@ -92,14 +92,14 @@ export async function POST(request: Request) {
 
     // Email de confirmación al usuario
     await resend.emails.send({
-      from: "EPICUS <info@epicus.com.mx>",
+      from: "ALFRA INMOBILIARIA <info@alfrainmobiliaria.com>",
       to: [correo],
-      subject: "Recibimos tu solicitud — EPICUS",
+      subject: "Recibimos tu solicitud — ALFRA INMOBILIARIA",
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 32px;">
           <h2 style="color: #0a1628; margin-bottom: 8px;">Hola, ${nombre}.</h2>
           <p style="color: #4b5563; font-size: 15px; line-height: 1.7; margin-bottom: 24px;">
-            Recibimos tu solicitud de asesoría. Un asesor de EPICUS te contactará 
+            Recibimos tu solicitud de asesoría. Un asesor de ALFRA INMOBILIARIA te contactará 
             en las próximas horas para agendar una conversación.
           </p>
           <p style="color: #4b5563; font-size: 15px; line-height: 1.7; margin-bottom: 32px;">
@@ -110,7 +110,7 @@ export async function POST(request: Request) {
           </a>
           <div style="margin-top: 48px; padding-top: 24px; border-top: 1px solid #e5e7eb;">
             <p style="margin: 0; font-size: 12px; color: #9ca3af;">
-              EPICUS — Asesoría Inmobiliaria · Monterrey, N.L.
+              ALFRA INMOBILIARIA — Asesoría Inmobiliaria · Monterrey, N.L.
             </p>
           </div>
         </div>

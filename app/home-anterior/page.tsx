@@ -12,11 +12,11 @@ export const revalidate = 60;
 // y fuera del sitemap.
 export const metadata = {
   robots: { index: false, follow: false },
-  title: "EPICUS — Asesoría Inmobiliaria en Monterrey",
+  title: "ALFRA INMOBILIARIA — Asesoría Inmobiliaria en Monterrey",
   description:
     "Asesoría e inteligencia inmobiliaria en Monterrey y área metropolitana. Acceso a 95 proyectos activos y 4,480 unidades disponibles.",
   openGraph: {
-    title: "EPICUS — Asesoría Inmobiliaria en Monterrey",
+    title: "ALFRA INMOBILIARIA — Asesoría Inmobiliaria en Monterrey",
     description:
       "Asesoría e inteligencia inmobiliaria en Monterrey y área metropolitana.",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],

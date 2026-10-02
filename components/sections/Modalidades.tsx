@@ -64,7 +64,7 @@ const modalidades = [
     label: "Modalidad 3",
     title: "Broker Tradicional",
     items: [
-      "Incluimos tu proyecto en el portafolio activo de EPICUS.",
+      "Incluimos tu proyecto en el portafolio activo de ALFRA INMOBILIARIA.",
       "Tu desarrollo llega a nuestra base de clientes calificados en Monterrey.",
       "Nuestros asesores lo presentan como una opción real dentro de su asesoría.",
       "Sin exclusividad ni compromisos de largo plazo.",

@@ -105,7 +105,7 @@ export default function Propuesta() {
  
       {/* Header */}
       <FadeIn delay={0}>
-        <SectionLabel>Qué es EPICUS</SectionLabel>
+        <SectionLabel>Qué es ALFRA INMOBILIARIA</SectionLabel>
         <h2 className="font-display text-h2 text-ink">
           Más que una inmobiliaria.<br />
           <em className="italic text-blue">Un asesor de confianza.</em>

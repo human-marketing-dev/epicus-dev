@@ -17,7 +17,7 @@ function MockDashboard() {
               <span className="w-[10px] h-[10px] rounded-full bg-[#28c840]" />
             </div>
             <span className="text-[11px] text-white/30 tracking-[0.05em]">
-              EPICUS Intelligence — Sistema de Inteligencia Comercial
+              Alfra Intelligence — Sistema de Inteligencia Comercial
             </span>
           </div>
           <div className="flex gap-4">
@@ -138,7 +138,7 @@ function MockDashboard() {
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/>
             </svg>
-            <span className="text-[11px] text-white/40 tracking-[0.06em]">Acceso disponible en tu asesoría con EPICUS</span>
+            <span className="text-[11px] text-white/40 tracking-[0.06em]">Acceso disponible en tu asesoría con ALFRA INMOBILIARIA</span>
             <Link href="/contacto" className="text-[11px] bg-blue text-white px-[14px] py-[5px] rounded-[3px] tracking-[0.04em]">Agendar →</Link>
           </div>
         </div>
@@ -147,9 +147,9 @@ function MockDashboard() {
   );
 }
 
-// ─── EpicusIntelligence ───────────────────────────────────────────────────────
+// ─── InteligenciaComercial ───────────────────────────────────────────────────────
 
-export default function EpicusIntelligence() {
+export default function InteligenciaComercial() {
   return (
     <div className="bg-ink py-14 px-[4%] overflow-hidden relative">
       <div className="absolute -top-20 -right-20 w-[400px] h-[400px] pointer-events-none" style={{ background: "radial-gradient(circle, rgba(37,99,235,0.25) 0%, transparent 70%)" }} />
@@ -158,7 +158,7 @@ export default function EpicusIntelligence() {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 items-start mb-10">
           <FadeIn delay={0}>
             <div>
-              <p className="text-overline text-blue-light mb-3">EPICUS Intelligence</p>
+              <p className="text-overline text-blue-light mb-3">Alfra Intelligence</p>
               <h2 className="font-display text-h2 text-white mb-4">
                 El mapa completo del mercado,<br />analizado contigo en tu asesoría.
               </h2>

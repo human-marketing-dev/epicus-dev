@@ -24,7 +24,7 @@ export default function DesarrolladoresHero() {
         </FadeIn>
         <FadeIn delay={0.15}>
           <p className="text-b1 font-light text-white/55 max-w-[560px] mb-10">
-            EPICUS opera como brazo comercial estratégico para desarrolladores que
+            ALFRA INMOBILIARIA opera como brazo comercial estratégico para desarrolladores que
             buscan resultados de ventas reales, no promesas. Ponemos nuestro equipo,
             nuestros sistemas y nuestro acceso al mercado al servicio de tu proyecto.
           </p>

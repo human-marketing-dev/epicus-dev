@@ -12,7 +12,8 @@ const nextConfig = {
     return [
       // /desarrolladores queda retirada; su código se conserva en
       // app/_desarrolladores (carpeta privada, fuera del enrutador).
-      { source: "/desarrolladores", destination: "/growth-partner", permanent: true },
+      { source: "/desarrolladores", destination: "/", permanent: true },
+      { source: "/growth-partner", destination: "/", permanent: true },
       // La demo del home nuevo pasó a ser la raíz.
       { source: "/demo", destination: "/", permanent: true },
     ];

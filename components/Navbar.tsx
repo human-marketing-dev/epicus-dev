@@ -10,11 +10,10 @@ import { cn } from "@/lib/utils";
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 // Nosotros, Portafolio y Desarrolladores quedan fuera de la navegación.
-// Sus rutas siguen vivas (Desarrolladores redirige a Growth Partner).
+// Sus rutas siguen vivas; /desarrolladores redirige al home.
 const links = [
-  { label: "Inmobiliaria",   href: "/" },
-  { label: "Growth Partner", href: "/growth-partner" },
-  { label: "Contacto",       href: "/contacto" },
+  { label: "Inmobiliaria", href: "/" },
+  { label: "Contacto",     href: "/contacto" },
 ];
 
 // ─── Navbar ───────────────────────────────────────────────────────────────────
@@ -30,11 +29,11 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="hover:opacity-80 transition-opacity duration-200">
           <Image
-            src="/logos/epicus-logo-black-blue.webp"
-            alt="EPICUS"
-            width={120}
-            height={32}
-            className="h-17 w-auto"
+            src="/logos/alfra-inmobiliaria-logo.webp"
+            alt="ALFRA INMOBILIARIA"
+            width={130}
+            height={54}
+            className="h-9 w-auto"
             priority
           />
         </Link>

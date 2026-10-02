@@ -47,7 +47,7 @@ export default function Hero({
         {imagenUrl ? (
           <img
             src={imagenUrl}
-            alt="EPICUS Hero"
+            alt="ALFRA INMOBILIARIA Hero"
             className="absolute inset-0 w-full h-full object-cover"
           />
         ) : (
@@ -79,7 +79,7 @@ export default function Hero({
         {/* Badge inferior — solo desktop */}
         <div className="absolute bottom-12 left-12 right-12 backdrop-blur-xl border border-white/15 bg-white/[0.08] px-7 py-6 text-white hidden lg:block">
           <div className="font-display text-h5 font-light italic mb-1">
-            EPICUS Intelligence
+            Alfra Intelligence
           </div>
           <div className="text-overline opacity-70 mb-5">
             Sistema de inteligencia comercial

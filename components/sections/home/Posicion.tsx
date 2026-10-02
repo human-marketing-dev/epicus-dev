@@ -33,8 +33,8 @@ function FotoFlotante() {
         }}
       >
         <Image
-          src="/epicus-santte.webp"
-          alt="Santte Residencial, desarrollo del portafolio de Epicus en Monterrey"
+          src="/alfrainmobiliaria-santte.webp"
+          alt="Santte Residencial, desarrollo del portafolio de Alfra Inmobiliaria en Monterrey"
           fill
           sizes="(max-width: 1024px) 100vw, 45vw"
           className="object-cover"
@@ -72,7 +72,7 @@ export default function Posicion() {
             </h2>
 
             <p className="text-b1 text-ink-mid mb-5">
-              Epicus trabaja en los dos frentes del mercado inmobiliario
+              Alfra Inmobiliaria trabaja en los dos frentes del mercado inmobiliario
               regiomontano. Comercializamos desarrollos para los principales
               desarrolladores de Monterrey y su área metropolitana, y asesoramos
               a quienes compran e invierten en ellos.
@@ -93,7 +93,7 @@ export default function Posicion() {
               href="/nosotros"
               className="inline-flex items-center gap-2 hover:gap-4 text-btn text-ink hover:text-blue transition-all duration-200"
             >
-              Conocer a Epicus
+              Conocer a Alfra Inmobiliaria
               <span aria-hidden>→</span>
             </Link>
           </div>
